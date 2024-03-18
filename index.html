@@ -243,16 +243,10 @@
                     <div class="col-lg-auto ml-auto">
                       <table class="table table-responsive align-content-center" style="background-color: whitesmoke; border-radius: 20px">
                           <thead>
-                            <tr>
+                            <tr colspan="3">
                               <th><p><em>Sentence 1: </em></p>
                               <p><em>The offer will run for the next three weekends.  </em></p></th>
                             
-                              <td colspan="2" style="vertical-align: top;"><p><strong>Reference Audio</strong></p>
-                                <p><em>The charity also has a project in Moscow in Russia.</em></p>
-                                <audio id="player" controls >
-                                    <source src="wav/ablation/ref_audio/620.wav" type="audio/wav" />
-                                </audio>
-                        </td>
                         </tr>
                           </thead>
 
@@ -261,6 +255,13 @@
                                
                                 <audio id="player" controls >
                                     <source src="wav/ablation/GT/620.wav" type="audio/wav" />
+                                </audio>
+                              
+                        </td>
+                          <td style="vertical-align: top;"><p><strong>Reference Audio</strong></p>
+                                <p><em>The charity also has a project in Moscow in Russia.</em></p>
+                                <audio id="player" controls >
+                                    <source src="wav/ablation/ref_audio/620.wav" type="audio/wav" />
                                 </audio>
                         </td>
                         </tr>
@@ -600,7 +601,7 @@
                           <thead>
                             <tr>
                               <th colspan="3"><p><em>Reference Audio: </em></p>
-                                <p><em>Ask her to bring these things with her from the store.</em></p>
+                                <p>Ask her to bring these things with her from the store.</p>
                                 <audio id="player" controls >
                                     <source src="wav/controllablility/gt_ref_206.wav" type="audio/wav" />
                                 </audio>
@@ -646,14 +647,14 @@
                         <table class="table table-responsive align-content-center" style="background-color: whitesmoke; border-radius: 20px">
                           <thead>
                             <tr>
-                              <th colspan="3"><p><em>GT Text: </em></p>
+                              <th colspan="3"><p><em>Sentence 2: </em></p>
                               <p><em>Brown is an interesting man, but he's not desperate.</em></p></th>
                             </tr>
                           </thead>
                           <thead>
                             <tr>
                               <th colspan="3"><p><em>Reference Audio: </em></p>
-                                <p><em>Text: It's a record label, not a form of music.</em></p>
+                                <p>Text: It's a record label, not a form of music.</p>
                                 <audio id="player" controls >
                                     <source src="wav/controllablility/gt_ref_515.wav" type="audio/wav" />
                                 </audio>
