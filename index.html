@@ -534,7 +534,7 @@
                 <div class="text-center">
                     <h2 class="page-section-heading d-inline-block">Ablation Study</h2>
                          <p class="pre-wrap lead"></p>   
-   <p class="pre-wrap lead">PP: Phoneme Predictor, AE: Acoustic Encoder</p>
+   <p class="pre-wrap lead">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD</p>
  
                 </div>
 
@@ -547,51 +547,61 @@
                           <thead>
                             <tr>
                               <th colspan="3"><p><em>Sentence 1: </em></p>
-                              <p><em>The rainbow is a division of white light into many beautiful colors.  </em></p></th>
+                              <p><em>The offer will run for the next three weekends.  </em></p></th>
                             </tr>
                           </thead>
+                          <tbody>
+                            <tr>
+                              <td rowspan="1" style="vertical-align: top;"><p><strong>Reference Audio</strong></p>
+                                <p><em>The charity also has a project in Moscow in Russia.</em></p>
+                                <audio id="player" controls >
+                                    <source src="wav/ablation/ref_audio/620.wav" type="audio/wav" />
+                                </audio>
+                        </td>
+                        </tr>
                           <tbody>
                             <tr>
                               <td rowspan="1" style="vertical-align: top;"><p><strong>GT</strong></p>
                                
                                 <audio id="player" controls >
-                                    <source src="audio/ablation/gt/generated_p237_007.wav" type="audio/wav" />
+                                    <source src="wav/ablation/GT/620.wav" type="audio/wav" />
                                 </audio>
                         </td>
                         </tr>
                         <tr>
-                     <td><p><strong>VITS (300k)</strong></p>
+                        </tr>
+                          <tbody>
+                            <tr>
+                              <td rowspan="1" style="vertical-align: top;"><p><strong>GSA-TTS</strong></p>
+                               
+                                <audio id="player" controls >
+                                    <source src="wav/ablation/GSA/620.wav" type="audio/wav" />
+                                </audio>
+                        </td>
+                        </tr>
+                        <tr>
+                     <td><p><strong>GSA-LSE</strong></p>
                                 <audio id="player" controls>
-                                    <source src="audio/ablation/vits_300k/generated_p237_007.wav" type="audio/wav" />
+                                    <source src="wav/ablation/noLSE/620.wav" type="audio/wav" />
                                 </audio>
                               </td>
-                              <td><p><strong>VITS w flow 8 (300k)</strong></p>
+                              <td><p><strong>GSA-GSE</strong></p>
                                 <audio id="player" controls>
-                                    <source src="audio/ablation/vits_flow8_300k/generated_p237_007.wav" type="audio/wav" />
+                                    <source src="wav/ablation/noGSE/620.wav" type="audio/wav" />
                                 </audio>
                               </td>
-                              <td><p><strong>VITS w PP (300k)</strong></p>
+                              <td><p><strong>GSA-StyleSeg.</strong></p>
                                 <audio id="player" controls>
-                                  <source src="audio/ablation/vits_pp_300k/generated_p237_007.wav" type="audio/wav" />
+                                  <source src="wav/ablation/noSpeechUnit/620.wav" type="audio/wav" />
                                 </audio></td>
-                    
                             </tr>
-                                                    <tr>
-                     <td><p><strong>HierSpeech (300k)</strong></p>
+                      <tr>
+
+                      <td><p><strong>FastPitch+MSE</strong></p>
                                 <audio id="player" controls>
-                                    <source src="audio/ablation/hierspeech_300k/generated_p237_007.wav" type="audio/wav" />
+                                    <source src="wav/ablation/MSE/620.wav" type="audio/wav" />
                                 </audio>
-                              </td>
-                              <td><p><strong>HierSpeech w.o AE (300k)</strong></p>
-                                <audio id="player" controls>
-                                    <source src="audio/ablation/hierspeech_wo_ae/generated_p237_007.wav" type="audio/wav" />
-                                </audio>
-                              </td>
-                              <td><p><strong>HierSpeech w.o AE and PP (300k)</strong></p>
-                                <audio id="player" controls>
-                                  <source src="audio/ablation/hierspeech_wo_ae_pp/generated_p237_007.wav" type="audio/wav" />
-                                </audio></td>
-                    
+                              </td>v
                             </tr>
                           </tbody>
                         </table>
@@ -607,41 +617,41 @@
                               <td rowspan="1" style="vertical-align: top;"><p><strong>GT</strong></p>
                                
                                 <audio id="player" controls >
-                                    <source src="audio/ablation/gt/generated_p257_001.wav" type="audio/wav" />
+                                    <source src="wav/ablation/gt/generated_p257_001.wav" type="audio/wav" />
                                 </audio>
                         </td>
                         </tr>
                         <tr>
                      <td><p><strong>VITS (300k)</strong></p>
                                 <audio id="player" controls>
-                                    <source src="audio/ablation/vits_300k/generated_p257_001.wav" type="audio/wav" />
+                                    <source src="wav/ablation/vits_300k/generated_p257_001.wav" type="audio/wav" />
                                 </audio>
                               </td>
                               <td><p><strong>VITS w flow 8 (300k)</strong></p>
                                 <audio id="player" controls>
-                                    <source src="audio/ablation/vits_flow8_300k/generated_p257_001.wav" type="audio/wav" />
+                                    <source src="wav/ablation/vits_flow8_300k/generated_p257_001.wav" type="audio/wav" />
                                 </audio>
                               </td>
                               <td><p><strong>VITS w PP (300k)</strong></p>
                                 <audio id="player" controls>
-                                  <source src="audio/ablation/vits_pp_300k/generated_p257_001.wav" type="audio/wav" />
+                                  <source src="wav/ablation/vits_pp_300k/generated_p257_001.wav" type="audio/wav" />
                                 </audio></td>
                     
                             </tr>
                                                     <tr>
                      <td><p><strong>HierSpeech (300k)</strong></p>
                                 <audio id="player" controls>
-                                    <source src="audio/ablation/hierspeech_300k/generated_p257_001.wav" type="audio/wav" />
+                                    <source src="wav/ablation/hierspeech_300k/generated_p257_001.wav" type="audio/wav" />
                                 </audio>
                               </td>
                               <td><p><strong>HierSpeech w.o AE (300k)</strong></p>
                                 <audio id="player" controls>
-                                    <source src="audio/ablation/hierspeech_wo_ae/generated_p257_001.wav" type="audio/wav" />
+                                    <source src="wav/ablation/hierspeech_wo_ae/generated_p257_001.wav" type="audio/wav" />
                                 </audio>
                               </td>
                               <td><p><strong>HierSpeech w.o AE and PP (300k)</strong></p>
                                 <audio id="player" controls>
-                                  <source src="audio/ablation/hierspeech_wo_ae_pp/generated_p257_001.wav" type="audio/wav" />
+                                  <source src="wav/ablation/hierspeech_wo_ae_pp/generated_p257_001.wav" type="audio/wav" />
                                 </audio></td>
                     
                             </tr>
