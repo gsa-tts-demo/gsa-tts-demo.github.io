@@ -36,10 +36,9 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#abstract">ABSTRACT</a>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#vctk">VCTK</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#libritts">LibriTTS</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#adaptation">Speaker Adaptation</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#conversion">Voice Conversion</a></li>
-                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#ablation">Ablation Study</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#ablation">Ablation Study</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#Controllability">Speaker Adaptation</a></li>
+                    
                     </ul>
                 </div>
             </div>
@@ -530,105 +529,6 @@
                     </div>
                     </section>
 
-                    <section class="page-section bg-primary text-white mb-0" id="adaptation">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="page-section-heading d-inline-block">Speaker Adaptation</h2>
-   <p class="pre-wrap lead">We train the baseline HierSpeech using VCTK (98 speakers) and LibriTTS (1,151 speakers). Based on the pre-trained HierSpeech, we fine-tune each model with 20 samples from each speaker (10 novel speakers from VCTK)</p>
-                </div>
-
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom"></div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-auto ml-auto">
-                      <table class="table table-responsive align-content-center" style="background-color: whitesmoke; border-radius: 20px">
-                          <thead>
-                            <tr>
-                              <th colspan="3"><p><em>Sentence 1: </em></p>
-                              <p><em>Aristotle thought that the rainbow was caused by reflection of the sun's rays by the rain.</em></p></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td rowspan="1" style="vertical-align: top;"><p><strong>GT</strong></p>
-                                <p><em>ASR: Aristotle thought that the rainbow was caused by the reflection <span style="color:red">f</span> the sun's rays <span style="color:red">on</span> the rain.</em></p>
-                                <audio id="player" controls >
-                                    <source src="audio/adaptation/gt/generated_p305_018.wav" type="audio/wav" />
-                                </audio>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><p><strong>HierSpeech (Zero-shot)</strong></p>
-                                <p><em>ASR: Aristotle thought <span style="color:red">t</span> the rainbow was caused by reflection <span style="color:red"></span> the sun's rays by the rain.</em></p>
-                                <audio id="player" controls >
-                                    <source src="audio/adaptation/zeroshot/generated_p305_018.wav" type="audio/wav" />
-                                </audio>
-                              </td>
-                              <td><p><strong>HierSpeech</strong></p>
-                                <p><em>ASR: Aristotle thought <span style="color:red"></span> that the rainbow was caused by reflection of <span style="color:red">a</span> sun's rays by the rain.</em></p>
-                                <audio id="player" controls >
-                                    <source src="audio/adaptation/hierspeech/generated_p305_018.wav" type="audio/wav" />
-                                </audio>
-                              </td>
-                              <td><p><strong>HierSpeech-U</strong></p>
-                                <p><em>ASR: Aristotle thought that the rainbow was caused by reflection of the sun's rays by the rain.</em></p>
-                                <audio id="player" controls >
-                                    <source src="audio/adaptation/hierspeechu/generated_p305_018.wav" type="audio/wav" />
-                                </audio>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      <p> </p>
-
-
-
-                        <table class="table table-responsive align-content-center" style="background-color: whitesmoke; border-radius: 20px">
-                          <thead>
-                            <tr>
-                              <th colspan="3"><p><em>Sentence 2: </em></p>
-                              <p><em>The norsemen considered the rainbow as a bridge over which the gods passed from earth to their home in the sky.</em></p></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td rowspan="1" style="vertical-align: top;"><p><strong>GT</strong></p>
-                                <p><em>ASR: The norsemen considered the rainbow as a bridge over which the gods passed from earth to their home in the sky.</em></p>
-                                <audio id="player" controls >
-                                    <source src="audio/adaptation/gt/generated_p246_016.wav" type="audio/wav" />
-                                </audio>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td><p><strong>HierSpeech (Zero-shot)</strong></p>
-                                <p><em>ASR: The norsemen considered the rainbow as a bridge over which the gods passed from earth to their home in the sky.</em></p>
-                                <audio id="player" controls >
-                                    <source src="audio/adaptation/zeroshot/generated_p246_016.wav" type="audio/wav" />
-                                </audio>
-                              </td>
-                              <td><p><strong>HierSpeech</strong></p>
-                                <p><em>ASR: The norsemen considered the rainbow as a bridge over which the gods passed from earth to their home in the sky.</em></p>
-                                <audio id="player" controls >
-                                    <source src="audio/adaptation/hierspeech/generated_p246_016.wav" type="audio/wav" />
-                                </audio>
-                              </td>
-                              <td><p><strong>HierSpeech-U</strong></p>
-                                <p><em>ASR: <span style="color:red">E</span> norsemen considered the rainbow as the bridge over which the gods passed from earth to their home in the sky.</em></p>
-                                <audio id="player" controls >
-                                    <source src="audio/adaptation/hierspeechu/generated_p246_016.wav" type="audio/wav" />
-                                </audio>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      <p> </p>
-                  </div>
-              </div>
-                    </div>
-                    </section>   
-
-
                       <section class="page-section bg-primary text-white mb-0" id="ablation">
             <div class="container">
                 <div class="text-center">
@@ -753,7 +653,103 @@
    </div>
                     </section>  
 
+                    <section class="page-section bg-primary text-white mb-0" id="Controllability">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="page-section-heading d-inline-block">Controllability</h2>
+   <p class="pre-wrap lead">We train the baseline HierSpeech using VCTK (98 speakers) and LibriTTS (1,151 speakers). Based on the pre-trained HierSpeech, we fine-tune each model with 20 samples from each speaker (10 novel speakers from VCTK)</p>
+                </div>
 
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-auto ml-auto">
+                      <table class="table table-responsive align-content-center" style="background-color: whitesmoke; border-radius: 20px">
+                          <thead>
+                            <tr>
+                              <th colspan="3"><p><em>Sentence 1: </em></p>
+                              <p><em>Aristotle thought that the rainbow was caused by reflection of the sun's rays by the rain.</em></p></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td rowspan="1" style="vertical-align: top;"><p><strong>GT</strong></p>
+                                <p><em>ASR: Aristotle thought that the rainbow was caused by the reflection <span style="color:red">f</span> the sun's rays <span style="color:red">on</span> the rain.</em></p>
+                                <audio id="player" controls >
+                                    <source src="audio/adaptation/gt/generated_p305_018.wav" type="audio/wav" />
+                                </audio>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><p><strong>HierSpeech (Zero-shot)</strong></p>
+                                <p><em>ASR: Aristotle thought <span style="color:red">t</span> the rainbow was caused by reflection <span style="color:red"></span> the sun's rays by the rain.</em></p>
+                                <audio id="player" controls >
+                                    <source src="audio/adaptation/zeroshot/generated_p305_018.wav" type="audio/wav" />
+                                </audio>
+                              </td>
+                              <td><p><strong>HierSpeech</strong></p>
+                                <p><em>ASR: Aristotle thought <span style="color:red"></span> that the rainbow was caused by reflection of <span style="color:red">a</span> sun's rays by the rain.</em></p>
+                                <audio id="player" controls >
+                                    <source src="audio/adaptation/hierspeech/generated_p305_018.wav" type="audio/wav" />
+                                </audio>
+                              </td>
+                              <td><p><strong>HierSpeech-U</strong></p>
+                                <p><em>ASR: Aristotle thought that the rainbow was caused by reflection of the sun's rays by the rain.</em></p>
+                                <audio id="player" controls >
+                                    <source src="audio/adaptation/hierspeechu/generated_p305_018.wav" type="audio/wav" />
+                                </audio>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      <p> </p>
+
+
+
+                        <table class="table table-responsive align-content-center" style="background-color: whitesmoke; border-radius: 20px">
+                          <thead>
+                            <tr>
+                              <th colspan="3"><p><em>Sentence 2: </em></p>
+                              <p><em>The norsemen considered the rainbow as a bridge over which the gods passed from earth to their home in the sky.</em></p></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td rowspan="1" style="vertical-align: top;"><p><strong>GT</strong></p>
+                                <p><em>ASR: The norsemen considered the rainbow as a bridge over which the gods passed from earth to their home in the sky.</em></p>
+                                <audio id="player" controls >
+                                    <source src="audio/adaptation/gt/generated_p246_016.wav" type="audio/wav" />
+                                </audio>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td><p><strong>HierSpeech (Zero-shot)</strong></p>
+                                <p><em>ASR: The norsemen considered the rainbow as a bridge over which the gods passed from earth to their home in the sky.</em></p>
+                                <audio id="player" controls >
+                                    <source src="audio/adaptation/zeroshot/generated_p246_016.wav" type="audio/wav" />
+                                </audio>
+                              </td>
+                              <td><p><strong>HierSpeech</strong></p>
+                                <p><em>ASR: The norsemen considered the rainbow as a bridge over which the gods passed from earth to their home in the sky.</em></p>
+                                <audio id="player" controls >
+                                    <source src="audio/adaptation/hierspeech/generated_p246_016.wav" type="audio/wav" />
+                                </audio>
+                              </td>
+                              <td><p><strong>HierSpeech-U</strong></p>
+                                <p><em>ASR: <span style="color:red">E</span> norsemen considered the rainbow as the bridge over which the gods passed from earth to their home in the sky.</em></p>
+                                <audio id="player" controls >
+                                    <source src="audio/adaptation/hierspeechu/generated_p246_016.wav" type="audio/wav" />
+                                </audio>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      <p> </p>
+                  </div>
+              </div>
+                    </div>
+                    </section>   
 
         <div class="scroll-to-top d-lg-none position-fixed"><a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
         <!-- Bootstrap core JS-->
