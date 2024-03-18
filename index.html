@@ -71,7 +71,7 @@
                       <p class="pre-wrap lead">We present the gradual style adaptor TTS (GSA-TTS) with a novel style encoder that gradually encodes speaking styles from an acoustic reference for zero-shot speech synthesis. GSA first captures the local style of each semantic sound unit. Then the local styles are combined by self-attention to obtain a global style. This semantic and hierarchical encoding strategy provides a robust style representation for an acoustic model. We test GSA-TTS on unseen speakers and obtain promising results regarding naturalness, speaker similarity, and intelligibility. Additionally, we explore the potential of GSA in terms of interpretability and controllability which stems from its hierarchical structure.</p>
                         <p class="pre-wrap lead">&nbsp;</p>
                         <p class="pre-wrap lead">&nbsp;</p>
-                        <p class="pre-wrap lead">Compare GSA-TTS with several TTS models as:</p>
+                        <p class="pre-wrap lead">Compare GSA-TTS with other TTS models as:</p>
                         <p class="pre-wrap lead"> 1. Meta-StyleSpeech : Multi-Speaker Adaptive Text-to-Speech Generation <a href="https://stylespeech.github.io/">[Official Demo page]</a><a href="https://github.com/KevinMIN95/StyleSpeech">[Official Code]</a></a></p>
                         <p class="pre-wrap lead"> 2. YourTTS: Towards Zero-Shot Multi-Speaker TTS and Zero-Shot Voice Conversion for everyone<a href="https://jaywalnut310.github.io/glow-tts-demo/index.html">[Official Demo page]</a><a href="https://github.com/freds0/YourTTS">[Official Code]</a></a></p>
                     
@@ -657,7 +657,7 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="page-section-heading d-inline-block">Controllability</h2>
-   <p class="pre-wrap lead">We train the baseline HierSpeech using VCTK (98 speakers) and LibriTTS (1,151 speakers). Based on the pre-trained HierSpeech, we fine-tune each model with 20 samples from each speaker (10 novel speakers from VCTK)</p>
+   <p class="pre-wrap lead">Descritpion</p>
                 </div>
 
                 <div class="divider-custom divider-light">
@@ -668,36 +668,39 @@
                       <table class="table table-responsive align-content-center" style="background-color: whitesmoke; border-radius: 20px">
                           <thead>
                             <tr>
-                              <th colspan="3"><p><em>Sentence 1: </em></p>
-                              <p><em>Aristotle thought that the rainbow was caused by reflection of the sun's rays by the rain.</em></p></th>
+                              <th colspan="3"><p><em>GT Text: </em></p>
+                              <p><em>Our traditions and cultures remain the same.</em></p></th>
+                              <audio id="player" controls ><p><em>Reference Audio: </em></p>
+                                    <source src="wav/controllablility/gt_ref_206.wav" type="audio/wav" />
+                                </audio>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
                               <td rowspan="1" style="vertical-align: top;"><p><strong>GT</strong></p>
-                                <p><em>ASR: Aristotle thought that the rainbow was caused by the reflection <span style="color:red">f</span> the sun's rays <span style="color:red">on</span> the rain.</em></p>
+                                <p><em>ASR: Our traditions and cultures remain the same.</em></p>
                                 <audio id="player" controls >
-                                    <source src="audio/adaptation/gt/generated_p305_018.wav" type="audio/wav" />
+                                    <source src="wav/controllablility/gt_origin_206.wav" type="audio/wav" />
                                 </audio>
                               </td>
                             </tr>
                             <tr>
-                              <td><p><strong>HierSpeech (Zero-shot)</strong></p>
-                                <p><em>ASR: Aristotle thought <span style="color:red">t</span> the rainbow was caused by reflection <span style="color:red"></span> the sun's rays by the rain.</em></p>
+                              <td><p><strong>GT(VOC)</strong></p>
+                                <p><em>ASR: Our traditions and cultures remain the same.</em></p>
                                 <audio id="player" controls >
-                                    <source src="audio/adaptation/zeroshot/generated_p305_018.wav" type="audio/wav" />
+                                    <source src="wav/controllablility/gt_voc_206.wav" type="audio/wav" />
                                 </audio>
                               </td>
-                              <td><p><strong>HierSpeech</strong></p>
-                                <p><em>ASR: Aristotle thought <span style="color:red"></span> that the rainbow was caused by reflection of <span style="color:red">a</span> sun's rays by the rain.</em></p>
+                              <td><p><strong>GSA-TTS(No Adjust Audio)</strong></p>
+                                <p><em>ASR: <span style="color:red">Out</span> traditions and cultures remain the same.</em></p>
                                 <audio id="player" controls >
-                                    <source src="audio/adaptation/hierspeech/generated_p305_018.wav" type="audio/wav" />
+                                    <source src="wav/controllablility/noadjust_206.wav" type="audio/wav" />
                                 </audio>
                               </td>
                               <td><p><strong>HierSpeech-U</strong></p>
-                                <p><em>ASR: Aristotle thought that the rainbow was caused by reflection of the sun's rays by the rain.</em></p>
+                                <p><em>ASR: <span style="color:red">Our</span> traditions and cultures remain the same.</em></p></em></p>
                                 <audio id="player" controls >
-                                    <source src="audio/adaptation/hierspeechu/generated_p305_018.wav" type="audio/wav" />
+                                    <source src="wav/controllablility/verb_206.wav" type="audio/wav" />
                                 </audio>
                               </td>
                             </tr>
