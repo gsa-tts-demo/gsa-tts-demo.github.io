@@ -16,7 +16,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>HierSpeech Demo</title>
+        <title>GSA-TTS Demo</title>
         <!-- Font Awesome icons (free version)-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
         <!-- Core theme CSS (includes Bootstrap)-->
@@ -47,11 +47,11 @@
         <header class="masthead bg-white text-left"> <!-- text-black 사용 가능 -->
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Heading-->
-                <h1 class="masthead-heading mb-0">HierSpeech: Bridging the Gap between Text and Speech by Hierarchical Variational Inference using Self-supervised Representation for Speech Synthesis</h1>
+                <h1 class="masthead-heading mb-0">GSA-TTS:Toward Zero-Shot Speech Synthesis based on Gradual Style Adaptor</h1>
                 <!-- Masthead Subheading-->
 		 <p class="pre-wrap lead">&nbsp;</p>
 		<p class="pre-wrap lead">&nbsp;</p>
-	    	<p class="pre-wrap lead">Sang-Hoon Lee, Seung-Bin Kim, Ji-Hyun Lee, Eunwoo Song, Min-Jae Hwang, Seong-Whan Lee</p>		  
+	    	<p class="pre-wrap lead">Anonymous submission to InterSpeech 2024</p>		  
             </div>
         </header>
 
@@ -69,14 +69,12 @@
                 <!-- Portfolio Grid Items-->
                 <div class="row justify-content-center">
                     <div class="col-lg-12 ml-auto">
-                      <p class="pre-wrap lead">This paper presents HierSpeech, a high-quality end-to-end text-to-speech (TTS) system based on a hierarchical conditional variational autoencoder (VAE) utilizing self-supervised speech representations. Recently, single-stage TTS systems, which directly generate raw speech waveform from text, have been getting interest thanks to their ability in generating high-quality audio within a fully end-to-end training pipeline. However, there is still a room for improvement in the conventional TTS systems. Since it is challenging to infer both the linguistic and acoustic attributes from the text directly, missing the details of attributes, specifically linguistic information, is inevitable, which results in mispronunciation and over-smoothing problem in their synthetic speech. To address the aforementioned problem, we leverage self-supervised speech representations as additional linguistic representations to bridge an information gap between text and speech. Then, the hierarchical conditional VAE is adopted to connect these representations and to learn each attribute hierarchically by improving the linguistic capability in latent representations. Compared with the state-of-the-art TTS system, HierSpeech achieves +0.303 comparative mean opinion score, and reduces the phoneme error rate of synthesized speech from 9.16% to 5.78% on the VCTK dataset. Furthermore, we extend our model to HierSpeech-U, an untranscribed text-to-speech system. Specifically, HierSpeech-U can adapt to a novel speaker by utilizing self-supervised speech representations without text transcripts. The experimental results reveal that our method outperforms publicly available TTS models, and show the effectiveness of speaker adaptation with untranscribed speech.</p>
+                      <p class="pre-wrap lead">We present the gradual style adaptor TTS (GSA-TTS) with a novel style encoder that gradually encodes speaking styles from an acoustic reference for zero-shot speech synthesis. GSA first captures the local style of each semantic sound unit. Then the local styles are combined by self-attention to obtain a global style. This semantic and hierarchical encoding strategy provides a robust style representation for an acoustic model. We test GSA-TTS on unseen speakers and obtain promising results regarding naturalness, speaker similarity, and intelligibility. Additionally, we explore the potential of GSA in terms of interpretability and controllability which stems from its hierarchical structure.</p>
                         <p class="pre-wrap lead">&nbsp;</p>
                         <p class="pre-wrap lead">&nbsp;</p>
-                        <p class="pre-wrap lead">We compare HierSpeech with several TTS models as:</p>
-                        <p class="pre-wrap lead"> 1. Tacotron2: Autoregressive TTS model <a href="https://google.github.io/tacotron/publications/tacotron2/index.html">[Official Demo page]</a><a href="https://github.com/NVIDIA/tacotron2">[Unofficial Code]</a></a></p>
-                        <p class="pre-wrap lead"> 2. Glow-TTS: Flow-based TTS model with Monotonic Alignment Search and normalizing flow <a href="https://jaywalnut310.github.io/glow-tts-demo/index.html">[Official Demo page]</a><a href="https://google.github.io/tacotron/publications/tacotron2/index.html">[Official Code]</a></a></p>
-                        <p class="pre-wrap lead"> 3. PortaSpeech: Non-autoregressive TTS model with VAE and Normalizing flow <a href="https://portaspeech.github.io/">[Official Demo page]</a><a href="https://github.com/NATSpeech/NATSpeech">[Official Code]</a></p>
-                        <p class="pre-wrap lead"> 4. VITS: Single-stage end-to-end TTS model with VAE augmented normalizing flow and adversarial training <a href="https://github.com/jaywalnut310/vits">[Official Demo page]</a><a href="https://github.com/jaywalnut310/vits">[Official Code]</a></p>
+                        <p class="pre-wrap lead">Compare GSA-TTS with several TTS models as:</p>
+                        <p class="pre-wrap lead"> 1. Meta-StyleSpeech : Multi-Speaker Adaptive Text-to-Speech Generation <a href="https://stylespeech.github.io/">[Official Demo page]</a><a href="https://github.com/KevinMIN95/StyleSpeech">[Official Code]</a></a></p>
+                        <p class="pre-wrap lead"> 2. YourTTS: Towards Zero-Shot Multi-Speaker TTS and Zero-Shot Voice Conversion for everyone<a href="https://jaywalnut310.github.io/glow-tts-demo/index.html">[Official Demo page]</a><a href="https://github.com/freds0/YourTTS">[Official Code]</a></a></p>
                     
 	    <p class="pre-wrap lead">&nbsp;</p>
 	
