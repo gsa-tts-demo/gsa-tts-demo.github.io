@@ -1,5 +1,0 @@
-/home/fredrick/Desktop/github_gsa/gsa-tts-demo.github.io/wav/ablation/GT/248.wav|We must improve our relations with the government.|/home/fredrick/Desktop/github_gsa/gsa-tts-demo.github.io/wav/ablation/noLSE/248.wav
-/home/fredrick/Desktop/github_gsa/gsa-tts-demo.github.io/wav/ablation/GT/473.wav|But the story of the play is worth a play in itself.|/home/fredrick/Desktop/github_gsa/gsa-tts-demo.github.io/wav/ablation/noLSE/473.wav
-/home/fredrick/Desktop/github_gsa/gsa-tts-demo.github.io/wav/ablation/GT/620.wav|The offer will run for the next three weekends.|/home/fredrick/Desktop/github_gsa/gsa-tts-demo.github.io/wav/ablation/noLSE/620.wav
-/home/fredrick/Desktop/github_gsa/gsa-tts-demo.github.io/wav/ablation/GT/626.wav|Scottish consumer protection groups were generally receptive to the proposals.|/home/fredrick/Desktop/github_gsa/gsa-tts-demo.github.io/wav/ablation/noLSE/626.wav
-/home/fredrick/Desktop/github_gsa/gsa-tts-demo.github.io/wav/ablation/GT/643.wav|You were very proud that day to be among their friends.|/home/fredrick/Desktop/github_gsa/gsa-tts-demo.github.io/wav/ablation/noLSE/643.wav
